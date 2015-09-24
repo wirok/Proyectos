@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="affd9e363dd54e4fa6fdaf17fafe5586" Name="Diagram1">
+        <EntityTypeShape EntityType="TrazaNetModel.ABERTURARED" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.AspNetRoles" Width="1.5" PointX="10.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.AspNetUserClaims" Width="1.5" PointX="15.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.AspNetUserLogins" Width="1.5" PointX="15.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.AspNetUsers" Width="1.5" PointX="13" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.CENTROS" Width="1.5" PointX="3.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.CICLOSCENTRO" Width="1.5" PointX="6" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.CROTAL" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.DENIERRED" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.EMPRESAS" Width="1.5" PointX="1.5" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.FIGURARED" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.FUNCIONRED" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.JAULA" Width="1.5" PointX="8.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.MEDIDARED" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.MODULOS" Width="1.5" PointX="6" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.MOVIMIENTO" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.MOVIMIENTORED" Width="1.5" PointX="10.5" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.PERSONAS" Width="1.5" PointX="3.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.RED" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.SERVICIOBUCEO" Width="1.5" PointX="6" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.TALLER" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.TELARED" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.TIPORED" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrazaNetModel.TRANSPORTE" Width="1.5" PointX="6" PointY="14.625" IsExpanded="true" />
+        <AssociationConnector Association="TrazaNetModel.FK_TIPORED_RELATIONS_ABERTURA" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_CENTROS_RELATIONS_EMPRESAS" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_CICLOSCE_REFERENCE_CENTROS" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_MODULOS_REFERENCE_CENTROS" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_MOVIMIEN_REFERENCE_CENTROS" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_CROTAL_REFERENCE_RED" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_TIPORED_RELATIONS_DENIERRE" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_PERSONAS_RELATIONS_EMPRESAS" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_TIPORED_REFERENCE_FIGURARE" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_TIPORED_RELATIONS_FUNCIONR" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_JAULA_REFERENCE_MODULOS" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_MOVIMIEN_REFERENCE_JAULA" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_TIPORED_RELATIONS_MEDIDARE" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_MOVIMIEN_REFERENCE_MOVIMIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_MOVIMIEN_REFERENCE_TALLER" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_MOVIMIEN_RELATIONS_SERVICIO" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_MOVIMIEN_RELATIONS_TRANSPOR" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_MOVIMIEN_REFERENCE_RED" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_RED_REFERENCE_TALLER" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_RED_REFERENCE_TIPORED" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.FK_TIPORED_RELATIONS_TELARED" ManuallyRouted="false" />
+        <AssociationConnector Association="TrazaNetModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

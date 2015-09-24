@@ -1,0 +1,112 @@
+﻿@model TrazaNet.DataLayer.TIPORED
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TIPORED</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMTIPORED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMTIPORED)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZIPPET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZIPPET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENSIONSTANDAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSIONSTANDAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TESNSIONMINIMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TESNSIONMINIMA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERIODOESTANDAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERIODOESTANDAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ABERTURARED.NOMABERTURA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ABERTURARED.NOMABERTURA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DENIERRED.NOMDENIER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DENIERRED.NOMDENIER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FIGURARED.NOMFIGURA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIGURARED.NOMFIGURA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FUNCIONRED.NOMFUNCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FUNCIONRED.NOMFUNCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEDIDARED.NOMMEDIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEDIDARED.NOMMEDIDA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELARED.NOMTELA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELARED.NOMTELA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,74 @@
+﻿@model TrazaNet.DataLayer.RED
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RED</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENSIOMETRIAINICIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSIOMETRIAINICIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHAINGRESO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHAINGRESO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTOINICIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTOINICIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIGENCIARED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIGENCIARED)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHACAMBIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHACAMBIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TALLER.NOMBRETALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TALLER.NOMBRETALLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPORED.NOMTIPORED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPORED.NOMTIPORED)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDRED }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

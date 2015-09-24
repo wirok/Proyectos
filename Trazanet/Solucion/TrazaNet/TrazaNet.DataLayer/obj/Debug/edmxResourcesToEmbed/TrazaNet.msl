@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrazaNetModelStoreContainer" CdmEntityContainer="StrConnTrazaNetEntities">
+    <EntitySetMapping Name="ABERTURARED">
+      <EntityTypeMapping TypeName="TrazaNetModel.ABERTURARED">
+        <MappingFragment StoreEntitySet="ABERTURARED">
+          <ScalarProperty Name="IDABERTURARED" ColumnName="IDABERTURARED" />
+          <ScalarProperty Name="NOMABERTURA" ColumnName="NOMABERTURA" />
+          <ScalarProperty Name="DESCABERTURA" ColumnName="DESCABERTURA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="TrazaNetModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="TrazaNetModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="TrazaNetModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="TrazaNetModel.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CENTROS">
+      <EntityTypeMapping TypeName="TrazaNetModel.CENTROS">
+        <MappingFragment StoreEntitySet="CENTROS">
+          <ScalarProperty Name="IDCENTRO" ColumnName="IDCENTRO" />
+          <ScalarProperty Name="RUTEMPRESA" ColumnName="RUTEMPRESA" />
+          <ScalarProperty Name="NOMBRECENTRO" ColumnName="NOMBRECENTRO" />
+          <ScalarProperty Name="COLUMN_4" ColumnName="COLUMN_4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CICLOSCENTRO">
+      <EntityTypeMapping TypeName="TrazaNetModel.CICLOSCENTRO">
+        <MappingFragment StoreEntitySet="CICLOSCENTRO">
+          <ScalarProperty Name="IDCICLO" ColumnName="IDCICLO" />
+          <ScalarProperty Name="IDCENTRO" ColumnName="IDCENTRO" />
+          <ScalarProperty Name="JEFECENTRO" ColumnName="JEFECENTRO" />
+          <ScalarProperty Name="ASISTENTECENTRO" ColumnName="ASISTENTECENTRO" />
+          <ScalarProperty Name="ENCARGADOREDES" ColumnName="ENCARGADOREDES" />
+          <ScalarProperty Name="DESCCICLO" ColumnName="DESCCICLO" />
+          <ScalarProperty Name="INICIOCICLO" ColumnName="INICIOCICLO" />
+          <ScalarProperty Name="FINCICLO" ColumnName="FINCICLO" />
+          <ScalarProperty Name="VIGENCIACICLO" ColumnName="VIGENCIACICLO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CROTAL">
+      <EntityTypeMapping TypeName="TrazaNetModel.CROTAL">
+        <MappingFragment StoreEntitySet="CROTAL">
+          <ScalarProperty Name="IDCROTAL" ColumnName="IDCROTAL" />
+          <ScalarProperty Name="CODCROTAL" ColumnName="CODCROTAL" />
+          <ScalarProperty Name="IDRED" ColumnName="IDRED" />
+          <ScalarProperty Name="FECINICIOCROTAL" ColumnName="FECINICIOCROTAL" />
+          <ScalarProperty Name="FECFINCROTAL" ColumnName="FECFINCROTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DENIERRED">
+      <EntityTypeMapping TypeName="TrazaNetModel.DENIERRED">
+        <MappingFragment StoreEntitySet="DENIERRED">
+          <ScalarProperty Name="IDDENIERRED" ColumnName="IDDENIERRED" />
+          <ScalarProperty Name="NOMDENIER" ColumnName="NOMDENIER" />
+          <ScalarProperty Name="DESCDENIER" ColumnName="DESCDENIER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESAS">
+      <EntityTypeMapping TypeName="TrazaNetModel.EMPRESAS">
+        <MappingFragment StoreEntitySet="EMPRESAS">
+          <ScalarProperty Name="RUTEMPRESA" ColumnName="RUTEMPRESA" />
+          <ScalarProperty Name="RAZONSOCIAL" ColumnName="RAZONSOCIAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIGURARED">
+      <EntityTypeMapping TypeName="TrazaNetModel.FIGURARED">
+        <MappingFragment StoreEntitySet="FIGURARED">
+          <ScalarProperty Name="IDFIGURA" ColumnName="IDFIGURA" />
+          <ScalarProperty Name="NOMFIGURA" ColumnName="NOMFIGURA" />
+          <ScalarProperty Name="DESCFIGURA" ColumnName="DESCFIGURA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUNCIONRED">
+      <EntityTypeMapping TypeName="TrazaNetModel.FUNCIONRED">
+        <MappingFragment StoreEntitySet="FUNCIONRED">
+          <ScalarProperty Name="IDFUNCIONRED" ColumnName="IDFUNCIONRED" />
+          <ScalarProperty Name="NOMFUNCION" ColumnName="NOMFUNCION" />
+          <ScalarProperty Name="DESCFUNCION" ColumnName="DESCFUNCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JAULA">
+      <EntityTypeMapping TypeName="TrazaNetModel.JAULA">
+        <MappingFragment StoreEntitySet="JAULA">
+          <ScalarProperty Name="IDJAULA" ColumnName="IDJAULA" />
+          <ScalarProperty Name="CODJAULA" ColumnName="CODJAULA" />
+          <ScalarProperty Name="IDMODULO" ColumnName="IDMODULO" />
+          <ScalarProperty Name="CABECERA" ColumnName="CABECERA" />
+          <ScalarProperty Name="POSICIONFILA" ColumnName="POSICIONFILA" />
+          <ScalarProperty Name="POSICIONCOLUMNA" ColumnName="POSICIONCOLUMNA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDIDARED">
+      <EntityTypeMapping TypeName="TrazaNetModel.MEDIDARED">
+        <MappingFragment StoreEntitySet="MEDIDARED">
+          <ScalarProperty Name="IDMEDIDARED" ColumnName="IDMEDIDARED" />
+          <ScalarProperty Name="NOMMEDIDA" ColumnName="NOMMEDIDA" />
+          <ScalarProperty Name="DESCMEDIDA" ColumnName="DESCMEDIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODULOS">
+      <EntityTypeMapping TypeName="TrazaNetModel.MODULOS">
+        <MappingFragment StoreEntitySet="MODULOS">
+          <ScalarProperty Name="IDMODULO" ColumnName="IDMODULO" />
+          <ScalarProperty Name="CODMODULO" ColumnName="CODMODULO" />
+          <ScalarProperty Name="IDCENTRO" ColumnName="IDCENTRO" />
+          <ScalarProperty Name="TIPOMODULO" ColumnName="TIPOMODULO" />
+          <ScalarProperty Name="CANTFILAS" ColumnName="CANTFILAS" />
+          <ScalarProperty Name="CANTCOLUMNAS" ColumnName="CANTCOLUMNAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOVIMIENTO">
+      <EntityTypeMapping TypeName="TrazaNetModel.MOVIMIENTO">
+        <MappingFragment StoreEntitySet="MOVIMIENTO">
+          <ScalarProperty Name="IDMOVIMIENTO" ColumnName="IDMOVIMIENTO" />
+          <ScalarProperty Name="IDTRANSPORTE" ColumnName="IDTRANSPORTE" />
+          <ScalarProperty Name="IDSERVICIO" ColumnName="IDSERVICIO" />
+          <ScalarProperty Name="RUTTALLER" ColumnName="RUTTALLER" />
+          <ScalarProperty Name="IDCENTRO" ColumnName="IDCENTRO" />
+          <ScalarProperty Name="TIPOMOVIMIENTO" ColumnName="TIPOMOVIMIENTO" />
+          <ScalarProperty Name="DOCTRASLADO" ColumnName="DOCTRASLADO" />
+          <ScalarProperty Name="DOCSERVICIOBUCEO" ColumnName="DOCSERVICIOBUCEO" />
+          <ScalarProperty Name="FECHAINICIOMOVIMIENTO" ColumnName="FECHAINICIOMOVIMIENTO" />
+          <ScalarProperty Name="FECHAFINMOVIMIENTO" ColumnName="FECHAFINMOVIMIENTO" />
+          <ScalarProperty Name="COMENTARIOSMOVIMIENTO" ColumnName="COMENTARIOSMOVIMIENTO" />
+          <ScalarProperty Name="TOTALNETO" ColumnName="TOTALNETO" />
+          <ScalarProperty Name="TOTALIMPUESTOS" ColumnName="TOTALIMPUESTOS" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHACREACION" ColumnName="FECHACREACION" />
+          <ScalarProperty Name="CHOFERTRANSPORTE" ColumnName="CHOFERTRANSPORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOVIMIENTORED">
+      <EntityTypeMapping TypeName="TrazaNetModel.MOVIMIENTORED">
+        <MappingFragment StoreEntitySet="MOVIMIENTORED">
+          <ScalarProperty Name="IDMOVIMIENTORED" ColumnName="IDMOVIMIENTORED" />
+          <ScalarProperty Name="IDRED" ColumnName="IDRED" />
+          <ScalarProperty Name="IDJAULA" ColumnName="IDJAULA" />
+          <ScalarProperty Name="IDMOVIMIENTO" ColumnName="IDMOVIMIENTO" />
+          <ScalarProperty Name="IMPREGNADO" ColumnName="IMPREGNADO" />
+          <ScalarProperty Name="LIMPIADO" ColumnName="LIMPIADO" />
+          <ScalarProperty Name="DESINFECTADO" ColumnName="DESINFECTADO" />
+          <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
+          <ScalarProperty Name="FECHAMAR" ColumnName="FECHAMAR" />
+          <ScalarProperty Name="FECHATRASLADO" ColumnName="FECHATRASLADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONAS">
+      <EntityTypeMapping TypeName="TrazaNetModel.PERSONAS">
+        <MappingFragment StoreEntitySet="PERSONAS">
+          <ScalarProperty Name="RUTPERSONA" ColumnName="RUTPERSONA" />
+          <ScalarProperty Name="RUTEMPRESA" ColumnName="RUTEMPRESA" />
+          <ScalarProperty Name="NOMBRESPERSONA" ColumnName="NOMBRESPERSONA" />
+          <ScalarProperty Name="APEPATERNO" ColumnName="APEPATERNO" />
+          <ScalarProperty Name="APEMATERNO" ColumnName="APEMATERNO" />
+          <ScalarProperty Name="CARGOPERSONA" ColumnName="CARGOPERSONA" />
+          <ScalarProperty Name="VIGENCIAPERSONA" ColumnName="VIGENCIAPERSONA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RED">
+      <EntityTypeMapping TypeName="TrazaNetModel.RED">
+        <MappingFragment StoreEntitySet="RED">
+          <ScalarProperty Name="IDRED" ColumnName="IDRED" />
+          <ScalarProperty Name="IDTIPORED" ColumnName="IDTIPORED" />
+          <ScalarProperty Name="RUTTALLER" ColumnName="RUTTALLER" />
+          <ScalarProperty Name="TENSIOMETRIAINICIAL" ColumnName="TENSIOMETRIAINICIAL" />
+          <ScalarProperty Name="FECHAINGRESO" ColumnName="FECHAINGRESO" />
+          <ScalarProperty Name="COSTOINICIAL" ColumnName="COSTOINICIAL" />
+          <ScalarProperty Name="VIGENCIARED" ColumnName="VIGENCIARED" />
+          <ScalarProperty Name="FECHACAMBIO" ColumnName="FECHACAMBIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIOBUCEO">
+      <EntityTypeMapping TypeName="TrazaNetModel.SERVICIOBUCEO">
+        <MappingFragment StoreEntitySet="SERVICIOBUCEO">
+          <ScalarProperty Name="IDSERVICIO" ColumnName="IDSERVICIO" />
+          <ScalarProperty Name="RUTSERVICIO" ColumnName="RUTSERVICIO" />
+          <ScalarProperty Name="NOMBRESERVICIO" ColumnName="NOMBRESERVICIO" />
+          <ScalarProperty Name="ENCARGADOSERVICIO" ColumnName="ENCARGADOSERVICIO" />
+          <ScalarProperty Name="CIUDADSERVICIO" ColumnName="CIUDADSERVICIO" />
+          <ScalarProperty Name="DIRECCIONSERVICIO" ColumnName="DIRECCIONSERVICIO" />
+          <ScalarProperty Name="FONOSERVICIO" ColumnName="FONOSERVICIO" />
+          <ScalarProperty Name="EMAILSERVICIO" ColumnName="EMAILSERVICIO" />
+          <ScalarProperty Name="VIGENCIASERVICIO" ColumnName="VIGENCIASERVICIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TALLER">
+      <EntityTypeMapping TypeName="TrazaNetModel.TALLER">
+        <MappingFragment StoreEntitySet="TALLER">
+          <ScalarProperty Name="RUTTALLER" ColumnName="RUTTALLER" />
+          <ScalarProperty Name="NOMBRETALLER" ColumnName="NOMBRETALLER" />
+          <ScalarProperty Name="CONTACTOTALLER" ColumnName="CONTACTOTALLER" />
+          <ScalarProperty Name="CIUDADTALLER" ColumnName="CIUDADTALLER" />
+          <ScalarProperty Name="DIRECCIONTALLER" ColumnName="DIRECCIONTALLER" />
+          <ScalarProperty Name="FONOTALLER" ColumnName="FONOTALLER" />
+          <ScalarProperty Name="EMAILTALLER" ColumnName="EMAILTALLER" />
+          <ScalarProperty Name="VIGENCIATALLER" ColumnName="VIGENCIATALLER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TELARED">
+      <EntityTypeMapping TypeName="TrazaNetModel.TELARED">
+        <MappingFragment StoreEntitySet="TELARED">
+          <ScalarProperty Name="IDTELA" ColumnName="IDTELA" />
+          <ScalarProperty Name="NOMTELA" ColumnName="NOMTELA" />
+          <ScalarProperty Name="DESCTELA" ColumnName="DESCTELA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPORED">
+      <EntityTypeMapping TypeName="TrazaNetModel.TIPORED">
+        <MappingFragment StoreEntitySet="TIPORED">
+          <ScalarProperty Name="IDTIPORED" ColumnName="IDTIPORED" />
+          <ScalarProperty Name="NOMTIPORED" ColumnName="NOMTIPORED" />
+          <ScalarProperty Name="IDDENIER" ColumnName="IDDENIER" />
+          <ScalarProperty Name="IDMEDIDARED" ColumnName="IDMEDIDARED" />
+          <ScalarProperty Name="IDTELA" ColumnName="IDTELA" />
+          <ScalarProperty Name="IDABERTURARED" ColumnName="IDABERTURARED" />
+          <ScalarProperty Name="IDFUNCIONRED" ColumnName="IDFUNCIONRED" />
+          <ScalarProperty Name="IDFIGURA" ColumnName="IDFIGURA" />
+          <ScalarProperty Name="ZIPPET" ColumnName="ZIPPET" />
+          <ScalarProperty Name="TENSIONSTANDAR" ColumnName="TENSIONSTANDAR" />
+          <ScalarProperty Name="TESNSIONMINIMA" ColumnName="TESNSIONMINIMA" />
+          <ScalarProperty Name="PERIODOESTANDAR" ColumnName="PERIODOESTANDAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSPORTE">
+      <EntityTypeMapping TypeName="TrazaNetModel.TRANSPORTE">
+        <MappingFragment StoreEntitySet="TRANSPORTE">
+          <ScalarProperty Name="IDTRANSPORTE" ColumnName="IDTRANSPORTE" />
+          <ScalarProperty Name="PATENTETRANSPORTE" ColumnName="PATENTETRANSPORTE" />
+          <ScalarProperty Name="TRASPORTEPROPIO" ColumnName="TRASPORTEPROPIO" />
+          <ScalarProperty Name="EMPRESATRANSPORTE" ColumnName="EMPRESATRANSPORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="TrazaNetModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

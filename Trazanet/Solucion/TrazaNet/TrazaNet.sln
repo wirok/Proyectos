@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrazaNet.Web", "TrazaNet.Web\TrazaNet.Web.csproj", "{7D355702-9A99-4910-A549-AC162A418EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrazaNet.DataLayer", "TrazaNet.DataLayer\TrazaNet.DataLayer.csproj", "{439D6E4B-2088-4A90-99E0-AAAE79ED9299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D355702-9A99-4910-A549-AC162A418EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D355702-9A99-4910-A549-AC162A418EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D355702-9A99-4910-A549-AC162A418EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D355702-9A99-4910-A549-AC162A418EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439D6E4B-2088-4A90-99E0-AAAE79ED9299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439D6E4B-2088-4A90-99E0-AAAE79ED9299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439D6E4B-2088-4A90-99E0-AAAE79ED9299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439D6E4B-2088-4A90-99E0-AAAE79ED9299}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

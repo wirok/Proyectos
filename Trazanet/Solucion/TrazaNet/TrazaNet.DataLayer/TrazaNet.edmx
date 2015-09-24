@@ -1,0 +1,1773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TrazaNetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ABERTURARED">
+          <Key>
+            <PropertyRef Name="IDABERTURARED" />
+          </Key>
+          <Property Name="IDABERTURARED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMABERTURA" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCABERTURA" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CENTROS">
+          <Key>
+            <PropertyRef Name="IDCENTRO" />
+          </Key>
+          <Property Name="IDCENTRO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RUTEMPRESA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NOMBRECENTRO" Type="varchar" MaxLength="50" />
+          <Property Name="COLUMN_4" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CICLOSCENTRO">
+          <Key>
+            <PropertyRef Name="IDCICLO" />
+          </Key>
+          <Property Name="IDCICLO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDCENTRO" Type="int" />
+          <Property Name="JEFECENTRO" Type="varchar" MaxLength="10" />
+          <Property Name="ASISTENTECENTRO" Type="varchar" MaxLength="10" />
+          <Property Name="ENCARGADOREDES" Type="varchar" MaxLength="10" />
+          <Property Name="DESCCICLO" Type="varchar" MaxLength="100" />
+          <Property Name="INICIOCICLO" Type="date" Nullable="false" />
+          <Property Name="FINCICLO" Type="datetime" Nullable="false" />
+          <Property Name="VIGENCIACICLO" Type="bit" />
+        </EntityType>
+        <EntityType Name="CROTAL">
+          <Key>
+            <PropertyRef Name="IDCROTAL" />
+          </Key>
+          <Property Name="IDCROTAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CODCROTAL" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="IDRED" Type="int" />
+          <Property Name="FECINICIOCROTAL" Type="datetime" />
+          <Property Name="FECFINCROTAL" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DENIERRED">
+          <Key>
+            <PropertyRef Name="IDDENIERRED" />
+          </Key>
+          <Property Name="IDDENIERRED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMDENIER" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCDENIER" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EMPRESAS">
+          <Key>
+            <PropertyRef Name="RUTEMPRESA" />
+          </Key>
+          <Property Name="RUTEMPRESA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="RAZONSOCIAL" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="FIGURARED">
+          <Key>
+            <PropertyRef Name="IDFIGURA" />
+          </Key>
+          <Property Name="IDFIGURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMFIGURA" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCFIGURA" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FUNCIONRED">
+          <Key>
+            <PropertyRef Name="IDFUNCIONRED" />
+          </Key>
+          <Property Name="IDFUNCIONRED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMFUNCION" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCFUNCION" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="JAULA">
+          <Key>
+            <PropertyRef Name="IDJAULA" />
+          </Key>
+          <Property Name="IDJAULA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CODJAULA" Type="varchar" MaxLength="50" />
+          <Property Name="IDMODULO" Type="int" />
+          <Property Name="CABECERA" Type="bit" />
+          <Property Name="POSICIONFILA" Type="int" Nullable="false" />
+          <Property Name="POSICIONCOLUMNA" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MEDIDARED">
+          <Key>
+            <PropertyRef Name="IDMEDIDARED" />
+          </Key>
+          <Property Name="IDMEDIDARED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMMEDIDA" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCMEDIDA" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MODULOS">
+          <Key>
+            <PropertyRef Name="IDMODULO" />
+          </Key>
+          <Property Name="IDMODULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CODMODULO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDCENTRO" Type="int" />
+          <Property Name="TIPOMODULO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CANTFILAS" Type="int" Nullable="false" />
+          <Property Name="CANTCOLUMNAS" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MOVIMIENTO">
+          <Key>
+            <PropertyRef Name="IDMOVIMIENTO" />
+          </Key>
+          <Property Name="IDMOVIMIENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDTRANSPORTE" Type="int" />
+          <Property Name="IDSERVICIO" Type="int" />
+          <Property Name="RUTTALLER" Type="varchar" MaxLength="10" />
+          <Property Name="IDCENTRO" Type="int" Nullable="false" />
+          <Property Name="TIPOMOVIMIENTO" Type="varchar" MaxLength="5" />
+          <Property Name="DOCTRASLADO" Type="varchar" MaxLength="30" />
+          <Property Name="DOCSERVICIOBUCEO" Type="varchar" MaxLength="30" />
+          <Property Name="FECHAINICIOMOVIMIENTO" Type="datetime" />
+          <Property Name="FECHAFINMOVIMIENTO" Type="datetime" />
+          <Property Name="COMENTARIOSMOVIMIENTO" Type="text" />
+          <Property Name="TOTALNETO" Type="int" />
+          <Property Name="TOTALIMPUESTOS" Type="int" />
+          <Property Name="TOTAL" Type="int" />
+          <Property Name="ESTADO" Type="varchar" MaxLength="5" />
+          <Property Name="FECHACREACION" Type="datetime" />
+          <Property Name="CHOFERTRANSPORTE" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="MOVIMIENTORED">
+          <Key>
+            <PropertyRef Name="IDMOVIMIENTORED" />
+          </Key>
+          <Property Name="IDMOVIMIENTORED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDRED" Type="int" />
+          <Property Name="IDJAULA" Type="int" />
+          <Property Name="IDMOVIMIENTO" Type="int" />
+          <Property Name="IMPREGNADO" Type="bit" />
+          <Property Name="LIMPIADO" Type="bit" />
+          <Property Name="DESINFECTADO" Type="bit" />
+          <Property Name="GARANTIA" Type="datetime" />
+          <Property Name="FECHAMAR" Type="datetime" />
+          <Property Name="FECHATRASLADO" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PERSONAS">
+          <Key>
+            <PropertyRef Name="RUTPERSONA" />
+          </Key>
+          <Property Name="RUTPERSONA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="RUTEMPRESA" Type="varchar" MaxLength="10" />
+          <Property Name="NOMBRESPERSONA" Type="varchar" MaxLength="100" />
+          <Property Name="APEPATERNO" Type="varchar" MaxLength="50" />
+          <Property Name="APEMATERNO" Type="varchar" MaxLength="50" />
+          <Property Name="CARGOPERSONA" Type="varchar" MaxLength="100" />
+          <Property Name="VIGENCIAPERSONA" Type="bit" />
+        </EntityType>
+        <EntityType Name="RED">
+          <Key>
+            <PropertyRef Name="IDRED" />
+          </Key>
+          <Property Name="IDRED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDTIPORED" Type="int" />
+          <Property Name="RUTTALLER" Type="varchar" MaxLength="10" />
+          <Property Name="TENSIOMETRIAINICIAL" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="FECHAINGRESO" Type="datetime" />
+          <Property Name="COSTOINICIAL" Type="int" />
+          <Property Name="VIGENCIARED" Type="bit" />
+          <Property Name="FECHACAMBIO" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SERVICIOBUCEO">
+          <Key>
+            <PropertyRef Name="IDSERVICIO" />
+          </Key>
+          <Property Name="IDSERVICIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RUTSERVICIO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOMBRESERVICIO" Type="varchar" MaxLength="50" />
+          <Property Name="ENCARGADOSERVICIO" Type="varchar" MaxLength="100" />
+          <Property Name="CIUDADSERVICIO" Type="varchar" MaxLength="50" />
+          <Property Name="DIRECCIONSERVICIO" Type="varchar" MaxLength="200" />
+          <Property Name="FONOSERVICIO" Type="varchar" MaxLength="30" />
+          <Property Name="EMAILSERVICIO" Type="varchar" MaxLength="50" />
+          <Property Name="VIGENCIASERVICIO" Type="bit" />
+        </EntityType>
+        <EntityType Name="TALLER">
+          <Key>
+            <PropertyRef Name="RUTTALLER" />
+          </Key>
+          <Property Name="RUTTALLER" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NOMBRETALLER" Type="varchar" MaxLength="200" />
+          <Property Name="CONTACTOTALLER" Type="varchar" MaxLength="200" />
+          <Property Name="CIUDADTALLER" Type="varchar" MaxLength="50" />
+          <Property Name="DIRECCIONTALLER" Type="varchar" MaxLength="200" />
+          <Property Name="FONOTALLER" Type="varchar" MaxLength="30" />
+          <Property Name="EMAILTALLER" Type="varchar" MaxLength="100" />
+          <Property Name="VIGENCIATALLER" Type="bit" />
+        </EntityType>
+        <EntityType Name="TELARED">
+          <Key>
+            <PropertyRef Name="IDTELA" />
+          </Key>
+          <Property Name="IDTELA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMTELA" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCTELA" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TIPORED">
+          <Key>
+            <PropertyRef Name="IDTIPORED" />
+          </Key>
+          <Property Name="IDTIPORED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMTIPORED" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDDENIER" Type="int" Nullable="false" />
+          <Property Name="IDMEDIDARED" Type="int" Nullable="false" />
+          <Property Name="IDTELA" Type="int" Nullable="false" />
+          <Property Name="IDABERTURARED" Type="int" Nullable="false" />
+          <Property Name="IDFUNCIONRED" Type="int" Nullable="false" />
+          <Property Name="IDFIGURA" Type="int" />
+          <Property Name="ZIPPET" Type="bit" />
+          <Property Name="TENSIONSTANDAR" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="TESNSIONMINIMA" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="PERIODOESTANDAR" Type="int" />
+        </EntityType>
+        <EntityType Name="TRANSPORTE">
+          <Key>
+            <PropertyRef Name="IDTRANSPORTE" />
+          </Key>
+          <Property Name="IDTRANSPORTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PATENTETRANSPORTE" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="TRASPORTEPROPIO" Type="bit" />
+          <Property Name="EMPRESATRANSPORTE" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK_CENTROS_RELATIONS_EMPRESAS">
+          <End Role="EMPRESAS" Type="Self.EMPRESAS" Multiplicity="1" />
+          <End Role="CENTROS" Type="Self.CENTROS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESAS">
+              <PropertyRef Name="RUTEMPRESA" />
+            </Principal>
+            <Dependent Role="CENTROS">
+              <PropertyRef Name="RUTEMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CICLOSCE_REFERENCE_CENTROS">
+          <End Role="CENTROS" Type="Self.CENTROS" Multiplicity="0..1" />
+          <End Role="CICLOSCENTRO" Type="Self.CICLOSCENTRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CENTROS">
+              <PropertyRef Name="IDCENTRO" />
+            </Principal>
+            <Dependent Role="CICLOSCENTRO">
+              <PropertyRef Name="IDCENTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CROTAL_REFERENCE_RED">
+          <End Role="RED" Type="Self.RED" Multiplicity="0..1" />
+          <End Role="CROTAL" Type="Self.CROTAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RED">
+              <PropertyRef Name="IDRED" />
+            </Principal>
+            <Dependent Role="CROTAL">
+              <PropertyRef Name="IDRED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JAULA_REFERENCE_MODULOS">
+          <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="0..1" />
+          <End Role="JAULA" Type="Self.JAULA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MODULOS">
+              <PropertyRef Name="IDMODULO" />
+            </Principal>
+            <Dependent Role="JAULA">
+              <PropertyRef Name="IDMODULO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MODULOS_REFERENCE_CENTROS">
+          <End Role="CENTROS" Type="Self.CENTROS" Multiplicity="0..1" />
+          <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CENTROS">
+              <PropertyRef Name="IDCENTRO" />
+            </Principal>
+            <Dependent Role="MODULOS">
+              <PropertyRef Name="IDCENTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_CENTROS">
+          <End Role="CENTROS" Type="Self.CENTROS" Multiplicity="1" />
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CENTROS">
+              <PropertyRef Name="IDCENTRO" />
+            </Principal>
+            <Dependent Role="MOVIMIENTO">
+              <PropertyRef Name="IDCENTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_JAULA">
+          <End Role="JAULA" Type="Self.JAULA" Multiplicity="0..1" />
+          <End Role="MOVIMIENTORED" Type="Self.MOVIMIENTORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JAULA">
+              <PropertyRef Name="IDJAULA" />
+            </Principal>
+            <Dependent Role="MOVIMIENTORED">
+              <PropertyRef Name="IDJAULA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_MOVIMIEN">
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="0..1" />
+          <End Role="MOVIMIENTORED" Type="Self.MOVIMIENTORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MOVIMIENTO">
+              <PropertyRef Name="IDMOVIMIENTO" />
+            </Principal>
+            <Dependent Role="MOVIMIENTORED">
+              <PropertyRef Name="IDMOVIMIENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_RED">
+          <End Role="RED" Type="Self.RED" Multiplicity="0..1" />
+          <End Role="MOVIMIENTORED" Type="Self.MOVIMIENTORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RED">
+              <PropertyRef Name="IDRED" />
+            </Principal>
+            <Dependent Role="MOVIMIENTORED">
+              <PropertyRef Name="IDRED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_TALLER">
+          <End Role="TALLER" Type="Self.TALLER" Multiplicity="0..1" />
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TALLER">
+              <PropertyRef Name="RUTTALLER" />
+            </Principal>
+            <Dependent Role="MOVIMIENTO">
+              <PropertyRef Name="RUTTALLER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_RELATIONS_SERVICIO">
+          <End Role="SERVICIOBUCEO" Type="Self.SERVICIOBUCEO" Multiplicity="0..1" />
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIOBUCEO">
+              <PropertyRef Name="IDSERVICIO" />
+            </Principal>
+            <Dependent Role="MOVIMIENTO">
+              <PropertyRef Name="IDSERVICIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_RELATIONS_TRANSPOR">
+          <End Role="TRANSPORTE" Type="Self.TRANSPORTE" Multiplicity="0..1" />
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRANSPORTE">
+              <PropertyRef Name="IDTRANSPORTE" />
+            </Principal>
+            <Dependent Role="MOVIMIENTO">
+              <PropertyRef Name="IDTRANSPORTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONAS_RELATIONS_EMPRESAS">
+          <End Role="EMPRESAS" Type="Self.EMPRESAS" Multiplicity="0..1" />
+          <End Role="PERSONAS" Type="Self.PERSONAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESAS">
+              <PropertyRef Name="RUTEMPRESA" />
+            </Principal>
+            <Dependent Role="PERSONAS">
+              <PropertyRef Name="RUTEMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RED_REFERENCE_TALLER">
+          <End Role="TALLER" Type="Self.TALLER" Multiplicity="0..1" />
+          <End Role="RED" Type="Self.RED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TALLER">
+              <PropertyRef Name="RUTTALLER" />
+            </Principal>
+            <Dependent Role="RED">
+              <PropertyRef Name="RUTTALLER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RED_REFERENCE_TIPORED">
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="0..1" />
+          <End Role="RED" Type="Self.RED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPORED">
+              <PropertyRef Name="IDTIPORED" />
+            </Principal>
+            <Dependent Role="RED">
+              <PropertyRef Name="IDTIPORED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_REFERENCE_FIGURARE">
+          <End Role="FIGURARED" Type="Self.FIGURARED" Multiplicity="0..1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FIGURARED">
+              <PropertyRef Name="IDFIGURA" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDFIGURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_ABERTURA">
+          <End Role="ABERTURARED" Type="Self.ABERTURARED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ABERTURARED">
+              <PropertyRef Name="IDABERTURARED" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDABERTURARED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_DENIERRE">
+          <End Role="DENIERRED" Type="Self.DENIERRED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DENIERRED">
+              <PropertyRef Name="IDDENIERRED" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDDENIER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_FUNCIONR">
+          <End Role="FUNCIONRED" Type="Self.FUNCIONRED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONRED">
+              <PropertyRef Name="IDFUNCIONRED" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDFUNCIONRED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_MEDIDARE">
+          <End Role="MEDIDARED" Type="Self.MEDIDARED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDIDARED">
+              <PropertyRef Name="IDMEDIDARED" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDMEDIDARED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_TELARED">
+          <End Role="TELARED" Type="Self.TELARED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TELARED">
+              <PropertyRef Name="IDTELA" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDTELA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TrazaNetModelStoreContainer">
+          <EntitySet Name="ABERTURARED" EntityType="Self.ABERTURARED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CENTROS" EntityType="Self.CENTROS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CICLOSCENTRO" EntityType="Self.CICLOSCENTRO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CROTAL" EntityType="Self.CROTAL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DENIERRED" EntityType="Self.DENIERRED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPRESAS" EntityType="Self.EMPRESAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FIGURARED" EntityType="Self.FIGURARED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FUNCIONRED" EntityType="Self.FUNCIONRED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JAULA" EntityType="Self.JAULA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MEDIDARED" EntityType="Self.MEDIDARED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MODULOS" EntityType="Self.MODULOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MOVIMIENTO" EntityType="Self.MOVIMIENTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MOVIMIENTORED" EntityType="Self.MOVIMIENTORED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RED" EntityType="Self.RED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SERVICIOBUCEO" EntityType="Self.SERVICIOBUCEO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TALLER" EntityType="Self.TALLER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TELARED" EntityType="Self.TELARED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIPORED" EntityType="Self.TIPORED" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRANSPORTE" EntityType="Self.TRANSPORTE" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CENTROS_RELATIONS_EMPRESAS" Association="Self.FK_CENTROS_RELATIONS_EMPRESAS">
+            <End Role="EMPRESAS" EntitySet="EMPRESAS" />
+            <End Role="CENTROS" EntitySet="CENTROS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CICLOSCE_REFERENCE_CENTROS" Association="Self.FK_CICLOSCE_REFERENCE_CENTROS">
+            <End Role="CENTROS" EntitySet="CENTROS" />
+            <End Role="CICLOSCENTRO" EntitySet="CICLOSCENTRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CROTAL_REFERENCE_RED" Association="Self.FK_CROTAL_REFERENCE_RED">
+            <End Role="RED" EntitySet="RED" />
+            <End Role="CROTAL" EntitySet="CROTAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JAULA_REFERENCE_MODULOS" Association="Self.FK_JAULA_REFERENCE_MODULOS">
+            <End Role="MODULOS" EntitySet="MODULOS" />
+            <End Role="JAULA" EntitySet="JAULA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MODULOS_REFERENCE_CENTROS" Association="Self.FK_MODULOS_REFERENCE_CENTROS">
+            <End Role="CENTROS" EntitySet="CENTROS" />
+            <End Role="MODULOS" EntitySet="MODULOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_CENTROS" Association="Self.FK_MOVIMIEN_REFERENCE_CENTROS">
+            <End Role="CENTROS" EntitySet="CENTROS" />
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_JAULA" Association="Self.FK_MOVIMIEN_REFERENCE_JAULA">
+            <End Role="JAULA" EntitySet="JAULA" />
+            <End Role="MOVIMIENTORED" EntitySet="MOVIMIENTORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_MOVIMIEN" Association="Self.FK_MOVIMIEN_REFERENCE_MOVIMIEN">
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+            <End Role="MOVIMIENTORED" EntitySet="MOVIMIENTORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_RED" Association="Self.FK_MOVIMIEN_REFERENCE_RED">
+            <End Role="RED" EntitySet="RED" />
+            <End Role="MOVIMIENTORED" EntitySet="MOVIMIENTORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_TALLER" Association="Self.FK_MOVIMIEN_REFERENCE_TALLER">
+            <End Role="TALLER" EntitySet="TALLER" />
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_RELATIONS_SERVICIO" Association="Self.FK_MOVIMIEN_RELATIONS_SERVICIO">
+            <End Role="SERVICIOBUCEO" EntitySet="SERVICIOBUCEO" />
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_RELATIONS_TRANSPOR" Association="Self.FK_MOVIMIEN_RELATIONS_TRANSPOR">
+            <End Role="TRANSPORTE" EntitySet="TRANSPORTE" />
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONAS_RELATIONS_EMPRESAS" Association="Self.FK_PERSONAS_RELATIONS_EMPRESAS">
+            <End Role="EMPRESAS" EntitySet="EMPRESAS" />
+            <End Role="PERSONAS" EntitySet="PERSONAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RED_REFERENCE_TALLER" Association="Self.FK_RED_REFERENCE_TALLER">
+            <End Role="TALLER" EntitySet="TALLER" />
+            <End Role="RED" EntitySet="RED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RED_REFERENCE_TIPORED" Association="Self.FK_RED_REFERENCE_TIPORED">
+            <End Role="TIPORED" EntitySet="TIPORED" />
+            <End Role="RED" EntitySet="RED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_REFERENCE_FIGURARE" Association="Self.FK_TIPORED_REFERENCE_FIGURARE">
+            <End Role="FIGURARED" EntitySet="FIGURARED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_ABERTURA" Association="Self.FK_TIPORED_RELATIONS_ABERTURA">
+            <End Role="ABERTURARED" EntitySet="ABERTURARED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_DENIERRE" Association="Self.FK_TIPORED_RELATIONS_DENIERRE">
+            <End Role="DENIERRED" EntitySet="DENIERRED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_FUNCIONR" Association="Self.FK_TIPORED_RELATIONS_FUNCIONR">
+            <End Role="FUNCIONRED" EntitySet="FUNCIONRED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_MEDIDARE" Association="Self.FK_TIPORED_RELATIONS_MEDIDARE">
+            <End Role="MEDIDARED" EntitySet="MEDIDARED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_TELARED" Association="Self.FK_TIPORED_RELATIONS_TELARED">
+            <End Role="TELARED" EntitySet="TELARED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TrazaNetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ABERTURARED">
+          <Key>
+            <PropertyRef Name="IDABERTURARED" />
+          </Key>
+          <Property Name="IDABERTURARED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMABERTURA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCABERTURA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TIPORED" Relationship="Self.FK_TIPORED_RELATIONS_ABERTURA" FromRole="ABERTURARED" ToRole="TIPORED" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="CENTROS">
+          <Key>
+            <PropertyRef Name="IDCENTRO" />
+          </Key>
+          <Property Name="IDCENTRO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RUTEMPRESA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRECENTRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COLUMN_4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EMPRESAS" Relationship="Self.FK_CENTROS_RELATIONS_EMPRESAS" FromRole="CENTROS" ToRole="EMPRESAS" />
+          <NavigationProperty Name="CICLOSCENTRO" Relationship="Self.FK_CICLOSCE_REFERENCE_CENTROS" FromRole="CENTROS" ToRole="CICLOSCENTRO" />
+          <NavigationProperty Name="MODULOS" Relationship="Self.FK_MODULOS_REFERENCE_CENTROS" FromRole="CENTROS" ToRole="MODULOS" />
+          <NavigationProperty Name="MOVIMIENTO" Relationship="Self.FK_MOVIMIEN_REFERENCE_CENTROS" FromRole="CENTROS" ToRole="MOVIMIENTO" />
+        </EntityType>
+        <EntityType Name="CICLOSCENTRO">
+          <Key>
+            <PropertyRef Name="IDCICLO" />
+          </Key>
+          <Property Name="IDCICLO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDCENTRO" Type="Int32" />
+          <Property Name="JEFECENTRO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ASISTENTECENTRO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ENCARGADOREDES" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DESCCICLO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="INICIOCICLO" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FINCICLO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="VIGENCIACICLO" Type="Boolean" />
+          <NavigationProperty Name="CENTROS" Relationship="Self.FK_CICLOSCE_REFERENCE_CENTROS" FromRole="CICLOSCENTRO" ToRole="CENTROS" />
+        </EntityType>
+        <EntityType Name="CROTAL">
+          <Key>
+            <PropertyRef Name="IDCROTAL" />
+          </Key>
+          <Property Name="IDCROTAL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CODCROTAL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDRED" Type="Int32" />
+          <Property Name="FECINICIOCROTAL" Type="DateTime" Precision="3" />
+          <Property Name="FECFINCROTAL" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="RED" Relationship="Self.FK_CROTAL_REFERENCE_RED" FromRole="CROTAL" ToRole="RED" />
+        </EntityType>
+        <EntityType Name="DENIERRED">
+          <Key>
+            <PropertyRef Name="IDDENIERRED" />
+          </Key>
+          <Property Name="IDDENIERRED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMDENIER" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCDENIER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TIPORED" Relationship="Self.FK_TIPORED_RELATIONS_DENIERRE" FromRole="DENIERRED" ToRole="TIPORED" />
+        </EntityType>
+        <EntityType Name="EMPRESAS">
+          <Key>
+            <PropertyRef Name="RUTEMPRESA" />
+          </Key>
+          <Property Name="RUTEMPRESA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RAZONSOCIAL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CENTROS" Relationship="Self.FK_CENTROS_RELATIONS_EMPRESAS" FromRole="EMPRESAS" ToRole="CENTROS" />
+          <NavigationProperty Name="PERSONAS" Relationship="Self.FK_PERSONAS_RELATIONS_EMPRESAS" FromRole="EMPRESAS" ToRole="PERSONAS" />
+        </EntityType>
+        <EntityType Name="FIGURARED">
+          <Key>
+            <PropertyRef Name="IDFIGURA" />
+          </Key>
+          <Property Name="IDFIGURA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMFIGURA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCFIGURA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TIPORED" Relationship="Self.FK_TIPORED_REFERENCE_FIGURARE" FromRole="FIGURARED" ToRole="TIPORED" />
+        </EntityType>
+        <EntityType Name="FUNCIONRED">
+          <Key>
+            <PropertyRef Name="IDFUNCIONRED" />
+          </Key>
+          <Property Name="IDFUNCIONRED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMFUNCION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCFUNCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TIPORED" Relationship="Self.FK_TIPORED_RELATIONS_FUNCIONR" FromRole="FUNCIONRED" ToRole="TIPORED" />
+        </EntityType>
+        <EntityType Name="JAULA">
+          <Key>
+            <PropertyRef Name="IDJAULA" />
+          </Key>
+          <Property Name="IDJAULA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CODJAULA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDMODULO" Type="Int32" />
+          <Property Name="CABECERA" Type="Boolean" />
+          <Property Name="POSICIONFILA" Type="Int32" Nullable="false" />
+          <Property Name="POSICIONCOLUMNA" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MODULOS" Relationship="Self.FK_JAULA_REFERENCE_MODULOS" FromRole="JAULA" ToRole="MODULOS" />
+          <NavigationProperty Name="MOVIMIENTORED" Relationship="Self.FK_MOVIMIEN_REFERENCE_JAULA" FromRole="JAULA" ToRole="MOVIMIENTORED" />
+        </EntityType>
+        <EntityType Name="MEDIDARED">
+          <Key>
+            <PropertyRef Name="IDMEDIDARED" />
+          </Key>
+          <Property Name="IDMEDIDARED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMMEDIDA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCMEDIDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TIPORED" Relationship="Self.FK_TIPORED_RELATIONS_MEDIDARE" FromRole="MEDIDARED" ToRole="TIPORED" />
+        </EntityType>
+        <EntityType Name="MODULOS">
+          <Key>
+            <PropertyRef Name="IDMODULO" />
+          </Key>
+          <Property Name="IDMODULO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CODMODULO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDCENTRO" Type="Int32" />
+          <Property Name="TIPOMODULO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CANTFILAS" Type="Int32" Nullable="false" />
+          <Property Name="CANTCOLUMNAS" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CENTROS" Relationship="Self.FK_MODULOS_REFERENCE_CENTROS" FromRole="MODULOS" ToRole="CENTROS" />
+          <NavigationProperty Name="JAULA" Relationship="Self.FK_JAULA_REFERENCE_MODULOS" FromRole="MODULOS" ToRole="JAULA" />
+        </EntityType>
+        <EntityType Name="MOVIMIENTO">
+          <Key>
+            <PropertyRef Name="IDMOVIMIENTO" />
+          </Key>
+          <Property Name="IDMOVIMIENTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDTRANSPORTE" Type="Int32" />
+          <Property Name="IDSERVICIO" Type="Int32" />
+          <Property Name="RUTTALLER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IDCENTRO" Type="Int32" Nullable="false" />
+          <Property Name="TIPOMOVIMIENTO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="DOCTRASLADO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="DOCSERVICIOBUCEO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FECHAINICIOMOVIMIENTO" Type="DateTime" Precision="3" />
+          <Property Name="FECHAFINMOVIMIENTO" Type="DateTime" Precision="3" />
+          <Property Name="COMENTARIOSMOVIMIENTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TOTALNETO" Type="Int32" />
+          <Property Name="TOTALIMPUESTOS" Type="Int32" />
+          <Property Name="TOTAL" Type="Int32" />
+          <Property Name="ESTADO" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="FECHACREACION" Type="DateTime" Precision="3" />
+          <Property Name="CHOFERTRANSPORTE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CENTROS" Relationship="Self.FK_MOVIMIEN_REFERENCE_CENTROS" FromRole="MOVIMIENTO" ToRole="CENTROS" />
+          <NavigationProperty Name="MOVIMIENTORED" Relationship="Self.FK_MOVIMIEN_REFERENCE_MOVIMIEN" FromRole="MOVIMIENTO" ToRole="MOVIMIENTORED" />
+          <NavigationProperty Name="TALLER" Relationship="Self.FK_MOVIMIEN_REFERENCE_TALLER" FromRole="MOVIMIENTO" ToRole="TALLER" />
+          <NavigationProperty Name="SERVICIOBUCEO" Relationship="Self.FK_MOVIMIEN_RELATIONS_SERVICIO" FromRole="MOVIMIENTO" ToRole="SERVICIOBUCEO" />
+          <NavigationProperty Name="TRANSPORTE" Relationship="Self.FK_MOVIMIEN_RELATIONS_TRANSPOR" FromRole="MOVIMIENTO" ToRole="TRANSPORTE" />
+        </EntityType>
+        <EntityType Name="MOVIMIENTORED">
+          <Key>
+            <PropertyRef Name="IDMOVIMIENTORED" />
+          </Key>
+          <Property Name="IDMOVIMIENTORED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDRED" Type="Int32" />
+          <Property Name="IDJAULA" Type="Int32" />
+          <Property Name="IDMOVIMIENTO" Type="Int32" />
+          <Property Name="IMPREGNADO" Type="Boolean" />
+          <Property Name="LIMPIADO" Type="Boolean" />
+          <Property Name="DESINFECTADO" Type="Boolean" />
+          <Property Name="GARANTIA" Type="DateTime" Precision="3" />
+          <Property Name="FECHAMAR" Type="DateTime" Precision="3" />
+          <Property Name="FECHATRASLADO" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="JAULA" Relationship="Self.FK_MOVIMIEN_REFERENCE_JAULA" FromRole="MOVIMIENTORED" ToRole="JAULA" />
+          <NavigationProperty Name="MOVIMIENTO" Relationship="Self.FK_MOVIMIEN_REFERENCE_MOVIMIEN" FromRole="MOVIMIENTORED" ToRole="MOVIMIENTO" />
+          <NavigationProperty Name="RED" Relationship="Self.FK_MOVIMIEN_REFERENCE_RED" FromRole="MOVIMIENTORED" ToRole="RED" />
+        </EntityType>
+        <EntityType Name="PERSONAS">
+          <Key>
+            <PropertyRef Name="RUTPERSONA" />
+          </Key>
+          <Property Name="RUTPERSONA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUTEMPRESA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRESPERSONA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="APEPATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APEMATERNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CARGOPERSONA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VIGENCIAPERSONA" Type="Boolean" />
+          <NavigationProperty Name="EMPRESAS" Relationship="Self.FK_PERSONAS_RELATIONS_EMPRESAS" FromRole="PERSONAS" ToRole="EMPRESAS" />
+        </EntityType>
+        <EntityType Name="RED">
+          <Key>
+            <PropertyRef Name="IDRED" />
+          </Key>
+          <Property Name="IDRED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDTIPORED" Type="Int32" />
+          <Property Name="RUTTALLER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TENSIOMETRIAINICIAL" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="FECHAINGRESO" Type="DateTime" Precision="3" />
+          <Property Name="COSTOINICIAL" Type="Int32" />
+          <Property Name="VIGENCIARED" Type="Boolean" />
+          <Property Name="FECHACAMBIO" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CROTAL" Relationship="Self.FK_CROTAL_REFERENCE_RED" FromRole="RED" ToRole="CROTAL" />
+          <NavigationProperty Name="MOVIMIENTORED" Relationship="Self.FK_MOVIMIEN_REFERENCE_RED" FromRole="RED" ToRole="MOVIMIENTORED" />
+          <NavigationProperty Name="TALLER" Relationship="Self.FK_RED_REFERENCE_TALLER" FromRole="RED" ToRole="TALLER" />
+          <NavigationProperty Name="TIPORED" Relationship="Self.FK_RED_REFERENCE_TIPORED" FromRole="RED" ToRole="TIPORED" />
+        </EntityType>
+        <EntityType Name="SERVICIOBUCEO">
+          <Key>
+            <PropertyRef Name="IDSERVICIO" />
+          </Key>
+          <Property Name="IDSERVICIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RUTSERVICIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRESERVICIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ENCARGADOSERVICIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CIUDADSERVICIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCIONSERVICIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FONOSERVICIO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EMAILSERVICIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VIGENCIASERVICIO" Type="Boolean" />
+          <NavigationProperty Name="MOVIMIENTO" Relationship="Self.FK_MOVIMIEN_RELATIONS_SERVICIO" FromRole="SERVICIOBUCEO" ToRole="MOVIMIENTO" />
+        </EntityType>
+        <EntityType Name="TALLER">
+          <Key>
+            <PropertyRef Name="RUTTALLER" />
+          </Key>
+          <Property Name="RUTTALLER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRETALLER" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CONTACTOTALLER" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CIUDADTALLER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCIONTALLER" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FONOTALLER" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EMAILTALLER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VIGENCIATALLER" Type="Boolean" />
+          <NavigationProperty Name="MOVIMIENTO" Relationship="Self.FK_MOVIMIEN_REFERENCE_TALLER" FromRole="TALLER" ToRole="MOVIMIENTO" />
+          <NavigationProperty Name="RED" Relationship="Self.FK_RED_REFERENCE_TALLER" FromRole="TALLER" ToRole="RED" />
+        </EntityType>
+        <EntityType Name="TELARED">
+          <Key>
+            <PropertyRef Name="IDTELA" />
+          </Key>
+          <Property Name="IDTELA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMTELA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCTELA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TIPORED" Relationship="Self.FK_TIPORED_RELATIONS_TELARED" FromRole="TELARED" ToRole="TIPORED" />
+        </EntityType>
+        <EntityType Name="TIPORED">
+          <Key>
+            <PropertyRef Name="IDTIPORED" />
+          </Key>
+          <Property Name="IDTIPORED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMTIPORED" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDDENIER" Type="Int32" Nullable="false" />
+          <Property Name="IDMEDIDARED" Type="Int32" Nullable="false" />
+          <Property Name="IDTELA" Type="Int32" Nullable="false" />
+          <Property Name="IDABERTURARED" Type="Int32" Nullable="false" />
+          <Property Name="IDFUNCIONRED" Type="Int32" Nullable="false" />
+          <Property Name="IDFIGURA" Type="Int32" />
+          <Property Name="ZIPPET" Type="Boolean" />
+          <Property Name="TENSIONSTANDAR" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="TESNSIONMINIMA" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="PERIODOESTANDAR" Type="Int32" />
+          <NavigationProperty Name="ABERTURARED" Relationship="Self.FK_TIPORED_RELATIONS_ABERTURA" FromRole="TIPORED" ToRole="ABERTURARED" />
+          <NavigationProperty Name="DENIERRED" Relationship="Self.FK_TIPORED_RELATIONS_DENIERRE" FromRole="TIPORED" ToRole="DENIERRED" />
+          <NavigationProperty Name="FIGURARED" Relationship="Self.FK_TIPORED_REFERENCE_FIGURARE" FromRole="TIPORED" ToRole="FIGURARED" />
+          <NavigationProperty Name="FUNCIONRED" Relationship="Self.FK_TIPORED_RELATIONS_FUNCIONR" FromRole="TIPORED" ToRole="FUNCIONRED" />
+          <NavigationProperty Name="MEDIDARED" Relationship="Self.FK_TIPORED_RELATIONS_MEDIDARE" FromRole="TIPORED" ToRole="MEDIDARED" />
+          <NavigationProperty Name="RED" Relationship="Self.FK_RED_REFERENCE_TIPORED" FromRole="TIPORED" ToRole="RED" />
+          <NavigationProperty Name="TELARED" Relationship="Self.FK_TIPORED_RELATIONS_TELARED" FromRole="TIPORED" ToRole="TELARED" />
+        </EntityType>
+        <EntityType Name="TRANSPORTE">
+          <Key>
+            <PropertyRef Name="IDTRANSPORTE" />
+          </Key>
+          <Property Name="IDTRANSPORTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PATENTETRANSPORTE" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TRASPORTEPROPIO" Type="Boolean" />
+          <Property Name="EMPRESATRANSPORTE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MOVIMIENTO" Relationship="Self.FK_MOVIMIEN_RELATIONS_TRANSPOR" FromRole="TRANSPORTE" ToRole="MOVIMIENTO" />
+        </EntityType>
+        <Association Name="FK_TIPORED_RELATIONS_ABERTURA">
+          <End Role="ABERTURARED" Type="Self.ABERTURARED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ABERTURARED">
+              <PropertyRef Name="IDABERTURARED" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDABERTURARED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CENTROS_RELATIONS_EMPRESAS">
+          <End Role="EMPRESAS" Type="Self.EMPRESAS" Multiplicity="1" />
+          <End Role="CENTROS" Type="Self.CENTROS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESAS">
+              <PropertyRef Name="RUTEMPRESA" />
+            </Principal>
+            <Dependent Role="CENTROS">
+              <PropertyRef Name="RUTEMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CICLOSCE_REFERENCE_CENTROS">
+          <End Role="CENTROS" Type="Self.CENTROS" Multiplicity="0..1" />
+          <End Role="CICLOSCENTRO" Type="Self.CICLOSCENTRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CENTROS">
+              <PropertyRef Name="IDCENTRO" />
+            </Principal>
+            <Dependent Role="CICLOSCENTRO">
+              <PropertyRef Name="IDCENTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MODULOS_REFERENCE_CENTROS">
+          <End Role="CENTROS" Type="Self.CENTROS" Multiplicity="0..1" />
+          <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CENTROS">
+              <PropertyRef Name="IDCENTRO" />
+            </Principal>
+            <Dependent Role="MODULOS">
+              <PropertyRef Name="IDCENTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_CENTROS">
+          <End Role="CENTROS" Type="Self.CENTROS" Multiplicity="1" />
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CENTROS">
+              <PropertyRef Name="IDCENTRO" />
+            </Principal>
+            <Dependent Role="MOVIMIENTO">
+              <PropertyRef Name="IDCENTRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CROTAL_REFERENCE_RED">
+          <End Role="RED" Type="Self.RED" Multiplicity="0..1" />
+          <End Role="CROTAL" Type="Self.CROTAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RED">
+              <PropertyRef Name="IDRED" />
+            </Principal>
+            <Dependent Role="CROTAL">
+              <PropertyRef Name="IDRED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_DENIERRE">
+          <End Role="DENIERRED" Type="Self.DENIERRED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DENIERRED">
+              <PropertyRef Name="IDDENIERRED" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDDENIER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONAS_RELATIONS_EMPRESAS">
+          <End Role="EMPRESAS" Type="Self.EMPRESAS" Multiplicity="0..1" />
+          <End Role="PERSONAS" Type="Self.PERSONAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESAS">
+              <PropertyRef Name="RUTEMPRESA" />
+            </Principal>
+            <Dependent Role="PERSONAS">
+              <PropertyRef Name="RUTEMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_REFERENCE_FIGURARE">
+          <End Role="FIGURARED" Type="Self.FIGURARED" Multiplicity="0..1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FIGURARED">
+              <PropertyRef Name="IDFIGURA" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDFIGURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_FUNCIONR">
+          <End Role="FUNCIONRED" Type="Self.FUNCIONRED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONRED">
+              <PropertyRef Name="IDFUNCIONRED" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDFUNCIONRED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JAULA_REFERENCE_MODULOS">
+          <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="0..1" />
+          <End Role="JAULA" Type="Self.JAULA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MODULOS">
+              <PropertyRef Name="IDMODULO" />
+            </Principal>
+            <Dependent Role="JAULA">
+              <PropertyRef Name="IDMODULO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_JAULA">
+          <End Role="JAULA" Type="Self.JAULA" Multiplicity="0..1" />
+          <End Role="MOVIMIENTORED" Type="Self.MOVIMIENTORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="JAULA">
+              <PropertyRef Name="IDJAULA" />
+            </Principal>
+            <Dependent Role="MOVIMIENTORED">
+              <PropertyRef Name="IDJAULA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_MEDIDARE">
+          <End Role="MEDIDARED" Type="Self.MEDIDARED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDIDARED">
+              <PropertyRef Name="IDMEDIDARED" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDMEDIDARED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_MOVIMIEN">
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="0..1" />
+          <End Role="MOVIMIENTORED" Type="Self.MOVIMIENTORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MOVIMIENTO">
+              <PropertyRef Name="IDMOVIMIENTO" />
+            </Principal>
+            <Dependent Role="MOVIMIENTORED">
+              <PropertyRef Name="IDMOVIMIENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_TALLER">
+          <End Role="TALLER" Type="Self.TALLER" Multiplicity="0..1" />
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TALLER">
+              <PropertyRef Name="RUTTALLER" />
+            </Principal>
+            <Dependent Role="MOVIMIENTO">
+              <PropertyRef Name="RUTTALLER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_RELATIONS_SERVICIO">
+          <End Role="SERVICIOBUCEO" Type="Self.SERVICIOBUCEO" Multiplicity="0..1" />
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIOBUCEO">
+              <PropertyRef Name="IDSERVICIO" />
+            </Principal>
+            <Dependent Role="MOVIMIENTO">
+              <PropertyRef Name="IDSERVICIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_RELATIONS_TRANSPOR">
+          <End Role="TRANSPORTE" Type="Self.TRANSPORTE" Multiplicity="0..1" />
+          <End Role="MOVIMIENTO" Type="Self.MOVIMIENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRANSPORTE">
+              <PropertyRef Name="IDTRANSPORTE" />
+            </Principal>
+            <Dependent Role="MOVIMIENTO">
+              <PropertyRef Name="IDTRANSPORTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MOVIMIEN_REFERENCE_RED">
+          <End Role="RED" Type="Self.RED" Multiplicity="0..1" />
+          <End Role="MOVIMIENTORED" Type="Self.MOVIMIENTORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RED">
+              <PropertyRef Name="IDRED" />
+            </Principal>
+            <Dependent Role="MOVIMIENTORED">
+              <PropertyRef Name="IDRED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RED_REFERENCE_TALLER">
+          <End Role="TALLER" Type="Self.TALLER" Multiplicity="0..1" />
+          <End Role="RED" Type="Self.RED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TALLER">
+              <PropertyRef Name="RUTTALLER" />
+            </Principal>
+            <Dependent Role="RED">
+              <PropertyRef Name="RUTTALLER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RED_REFERENCE_TIPORED">
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="0..1" />
+          <End Role="RED" Type="Self.RED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPORED">
+              <PropertyRef Name="IDTIPORED" />
+            </Principal>
+            <Dependent Role="RED">
+              <PropertyRef Name="IDTIPORED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPORED_RELATIONS_TELARED">
+          <End Role="TELARED" Type="Self.TELARED" Multiplicity="1" />
+          <End Role="TIPORED" Type="Self.TIPORED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TELARED">
+              <PropertyRef Name="IDTELA" />
+            </Principal>
+            <Dependent Role="TIPORED">
+              <PropertyRef Name="IDTELA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="StrConnTrazaNetEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ABERTURARED" EntityType="Self.ABERTURARED" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" />
+          <EntitySet Name="CENTROS" EntityType="Self.CENTROS" />
+          <EntitySet Name="CICLOSCENTRO" EntityType="Self.CICLOSCENTRO" />
+          <EntitySet Name="CROTAL" EntityType="Self.CROTAL" />
+          <EntitySet Name="DENIERRED" EntityType="Self.DENIERRED" />
+          <EntitySet Name="EMPRESAS" EntityType="Self.EMPRESAS" />
+          <EntitySet Name="FIGURARED" EntityType="Self.FIGURARED" />
+          <EntitySet Name="FUNCIONRED" EntityType="Self.FUNCIONRED" />
+          <EntitySet Name="JAULA" EntityType="Self.JAULA" />
+          <EntitySet Name="MEDIDARED" EntityType="Self.MEDIDARED" />
+          <EntitySet Name="MODULOS" EntityType="Self.MODULOS" />
+          <EntitySet Name="MOVIMIENTO" EntityType="Self.MOVIMIENTO" />
+          <EntitySet Name="MOVIMIENTORED" EntityType="Self.MOVIMIENTORED" />
+          <EntitySet Name="PERSONAS" EntityType="Self.PERSONAS" />
+          <EntitySet Name="RED" EntityType="Self.RED" />
+          <EntitySet Name="SERVICIOBUCEO" EntityType="Self.SERVICIOBUCEO" />
+          <EntitySet Name="TALLER" EntityType="Self.TALLER" />
+          <EntitySet Name="TELARED" EntityType="Self.TELARED" />
+          <EntitySet Name="TIPORED" EntityType="Self.TIPORED" />
+          <EntitySet Name="TRANSPORTE" EntityType="Self.TRANSPORTE" />
+          <AssociationSet Name="FK_TIPORED_RELATIONS_ABERTURA" Association="Self.FK_TIPORED_RELATIONS_ABERTURA">
+            <End Role="ABERTURARED" EntitySet="ABERTURARED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CENTROS_RELATIONS_EMPRESAS" Association="Self.FK_CENTROS_RELATIONS_EMPRESAS">
+            <End Role="EMPRESAS" EntitySet="EMPRESAS" />
+            <End Role="CENTROS" EntitySet="CENTROS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CICLOSCE_REFERENCE_CENTROS" Association="Self.FK_CICLOSCE_REFERENCE_CENTROS">
+            <End Role="CENTROS" EntitySet="CENTROS" />
+            <End Role="CICLOSCENTRO" EntitySet="CICLOSCENTRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MODULOS_REFERENCE_CENTROS" Association="Self.FK_MODULOS_REFERENCE_CENTROS">
+            <End Role="CENTROS" EntitySet="CENTROS" />
+            <End Role="MODULOS" EntitySet="MODULOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_CENTROS" Association="Self.FK_MOVIMIEN_REFERENCE_CENTROS">
+            <End Role="CENTROS" EntitySet="CENTROS" />
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CROTAL_REFERENCE_RED" Association="Self.FK_CROTAL_REFERENCE_RED">
+            <End Role="RED" EntitySet="RED" />
+            <End Role="CROTAL" EntitySet="CROTAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_DENIERRE" Association="Self.FK_TIPORED_RELATIONS_DENIERRE">
+            <End Role="DENIERRED" EntitySet="DENIERRED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONAS_RELATIONS_EMPRESAS" Association="Self.FK_PERSONAS_RELATIONS_EMPRESAS">
+            <End Role="EMPRESAS" EntitySet="EMPRESAS" />
+            <End Role="PERSONAS" EntitySet="PERSONAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_REFERENCE_FIGURARE" Association="Self.FK_TIPORED_REFERENCE_FIGURARE">
+            <End Role="FIGURARED" EntitySet="FIGURARED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_FUNCIONR" Association="Self.FK_TIPORED_RELATIONS_FUNCIONR">
+            <End Role="FUNCIONRED" EntitySet="FUNCIONRED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JAULA_REFERENCE_MODULOS" Association="Self.FK_JAULA_REFERENCE_MODULOS">
+            <End Role="MODULOS" EntitySet="MODULOS" />
+            <End Role="JAULA" EntitySet="JAULA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_JAULA" Association="Self.FK_MOVIMIEN_REFERENCE_JAULA">
+            <End Role="JAULA" EntitySet="JAULA" />
+            <End Role="MOVIMIENTORED" EntitySet="MOVIMIENTORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_MEDIDARE" Association="Self.FK_TIPORED_RELATIONS_MEDIDARE">
+            <End Role="MEDIDARED" EntitySet="MEDIDARED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_MOVIMIEN" Association="Self.FK_MOVIMIEN_REFERENCE_MOVIMIEN">
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+            <End Role="MOVIMIENTORED" EntitySet="MOVIMIENTORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_TALLER" Association="Self.FK_MOVIMIEN_REFERENCE_TALLER">
+            <End Role="TALLER" EntitySet="TALLER" />
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_RELATIONS_SERVICIO" Association="Self.FK_MOVIMIEN_RELATIONS_SERVICIO">
+            <End Role="SERVICIOBUCEO" EntitySet="SERVICIOBUCEO" />
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_RELATIONS_TRANSPOR" Association="Self.FK_MOVIMIEN_RELATIONS_TRANSPOR">
+            <End Role="TRANSPORTE" EntitySet="TRANSPORTE" />
+            <End Role="MOVIMIENTO" EntitySet="MOVIMIENTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MOVIMIEN_REFERENCE_RED" Association="Self.FK_MOVIMIEN_REFERENCE_RED">
+            <End Role="RED" EntitySet="RED" />
+            <End Role="MOVIMIENTORED" EntitySet="MOVIMIENTORED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RED_REFERENCE_TALLER" Association="Self.FK_RED_REFERENCE_TALLER">
+            <End Role="TALLER" EntitySet="TALLER" />
+            <End Role="RED" EntitySet="RED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RED_REFERENCE_TIPORED" Association="Self.FK_RED_REFERENCE_TIPORED">
+            <End Role="TIPORED" EntitySet="TIPORED" />
+            <End Role="RED" EntitySet="RED" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPORED_RELATIONS_TELARED" Association="Self.FK_TIPORED_RELATIONS_TELARED">
+            <End Role="TELARED" EntitySet="TELARED" />
+            <End Role="TIPORED" EntitySet="TIPORED" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TrazaNetModelStoreContainer" CdmEntityContainer="StrConnTrazaNetEntities">
+          <EntitySetMapping Name="ABERTURARED">
+            <EntityTypeMapping TypeName="TrazaNetModel.ABERTURARED">
+              <MappingFragment StoreEntitySet="ABERTURARED">
+                <ScalarProperty Name="IDABERTURARED" ColumnName="IDABERTURARED" />
+                <ScalarProperty Name="NOMABERTURA" ColumnName="NOMABERTURA" />
+                <ScalarProperty Name="DESCABERTURA" ColumnName="DESCABERTURA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="TrazaNetModel.AspNetRoles">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="TrazaNetModel.AspNetUserClaims">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="TrazaNetModel.AspNetUserLogins">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="TrazaNetModel.AspNetUsers">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CENTROS">
+            <EntityTypeMapping TypeName="TrazaNetModel.CENTROS">
+              <MappingFragment StoreEntitySet="CENTROS">
+                <ScalarProperty Name="IDCENTRO" ColumnName="IDCENTRO" />
+                <ScalarProperty Name="RUTEMPRESA" ColumnName="RUTEMPRESA" />
+                <ScalarProperty Name="NOMBRECENTRO" ColumnName="NOMBRECENTRO" />
+                <ScalarProperty Name="COLUMN_4" ColumnName="COLUMN_4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CICLOSCENTRO">
+            <EntityTypeMapping TypeName="TrazaNetModel.CICLOSCENTRO">
+              <MappingFragment StoreEntitySet="CICLOSCENTRO">
+                <ScalarProperty Name="IDCICLO" ColumnName="IDCICLO" />
+                <ScalarProperty Name="IDCENTRO" ColumnName="IDCENTRO" />
+                <ScalarProperty Name="JEFECENTRO" ColumnName="JEFECENTRO" />
+                <ScalarProperty Name="ASISTENTECENTRO" ColumnName="ASISTENTECENTRO" />
+                <ScalarProperty Name="ENCARGADOREDES" ColumnName="ENCARGADOREDES" />
+                <ScalarProperty Name="DESCCICLO" ColumnName="DESCCICLO" />
+                <ScalarProperty Name="INICIOCICLO" ColumnName="INICIOCICLO" />
+                <ScalarProperty Name="FINCICLO" ColumnName="FINCICLO" />
+                <ScalarProperty Name="VIGENCIACICLO" ColumnName="VIGENCIACICLO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CROTAL">
+            <EntityTypeMapping TypeName="TrazaNetModel.CROTAL">
+              <MappingFragment StoreEntitySet="CROTAL">
+                <ScalarProperty Name="IDCROTAL" ColumnName="IDCROTAL" />
+                <ScalarProperty Name="CODCROTAL" ColumnName="CODCROTAL" />
+                <ScalarProperty Name="IDRED" ColumnName="IDRED" />
+                <ScalarProperty Name="FECINICIOCROTAL" ColumnName="FECINICIOCROTAL" />
+                <ScalarProperty Name="FECFINCROTAL" ColumnName="FECFINCROTAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DENIERRED">
+            <EntityTypeMapping TypeName="TrazaNetModel.DENIERRED">
+              <MappingFragment StoreEntitySet="DENIERRED">
+                <ScalarProperty Name="IDDENIERRED" ColumnName="IDDENIERRED" />
+                <ScalarProperty Name="NOMDENIER" ColumnName="NOMDENIER" />
+                <ScalarProperty Name="DESCDENIER" ColumnName="DESCDENIER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPRESAS">
+            <EntityTypeMapping TypeName="TrazaNetModel.EMPRESAS">
+              <MappingFragment StoreEntitySet="EMPRESAS">
+                <ScalarProperty Name="RUTEMPRESA" ColumnName="RUTEMPRESA" />
+                <ScalarProperty Name="RAZONSOCIAL" ColumnName="RAZONSOCIAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FIGURARED">
+            <EntityTypeMapping TypeName="TrazaNetModel.FIGURARED">
+              <MappingFragment StoreEntitySet="FIGURARED">
+                <ScalarProperty Name="IDFIGURA" ColumnName="IDFIGURA" />
+                <ScalarProperty Name="NOMFIGURA" ColumnName="NOMFIGURA" />
+                <ScalarProperty Name="DESCFIGURA" ColumnName="DESCFIGURA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUNCIONRED">
+            <EntityTypeMapping TypeName="TrazaNetModel.FUNCIONRED">
+              <MappingFragment StoreEntitySet="FUNCIONRED">
+                <ScalarProperty Name="IDFUNCIONRED" ColumnName="IDFUNCIONRED" />
+                <ScalarProperty Name="NOMFUNCION" ColumnName="NOMFUNCION" />
+                <ScalarProperty Name="DESCFUNCION" ColumnName="DESCFUNCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JAULA">
+            <EntityTypeMapping TypeName="TrazaNetModel.JAULA">
+              <MappingFragment StoreEntitySet="JAULA">
+                <ScalarProperty Name="IDJAULA" ColumnName="IDJAULA" />
+                <ScalarProperty Name="CODJAULA" ColumnName="CODJAULA" />
+                <ScalarProperty Name="IDMODULO" ColumnName="IDMODULO" />
+                <ScalarProperty Name="CABECERA" ColumnName="CABECERA" />
+                <ScalarProperty Name="POSICIONFILA" ColumnName="POSICIONFILA" />
+                <ScalarProperty Name="POSICIONCOLUMNA" ColumnName="POSICIONCOLUMNA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MEDIDARED">
+            <EntityTypeMapping TypeName="TrazaNetModel.MEDIDARED">
+              <MappingFragment StoreEntitySet="MEDIDARED">
+                <ScalarProperty Name="IDMEDIDARED" ColumnName="IDMEDIDARED" />
+                <ScalarProperty Name="NOMMEDIDA" ColumnName="NOMMEDIDA" />
+                <ScalarProperty Name="DESCMEDIDA" ColumnName="DESCMEDIDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MODULOS">
+            <EntityTypeMapping TypeName="TrazaNetModel.MODULOS">
+              <MappingFragment StoreEntitySet="MODULOS">
+                <ScalarProperty Name="IDMODULO" ColumnName="IDMODULO" />
+                <ScalarProperty Name="CODMODULO" ColumnName="CODMODULO" />
+                <ScalarProperty Name="IDCENTRO" ColumnName="IDCENTRO" />
+                <ScalarProperty Name="TIPOMODULO" ColumnName="TIPOMODULO" />
+                <ScalarProperty Name="CANTFILAS" ColumnName="CANTFILAS" />
+                <ScalarProperty Name="CANTCOLUMNAS" ColumnName="CANTCOLUMNAS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MOVIMIENTO">
+            <EntityTypeMapping TypeName="TrazaNetModel.MOVIMIENTO">
+              <MappingFragment StoreEntitySet="MOVIMIENTO">
+                <ScalarProperty Name="IDMOVIMIENTO" ColumnName="IDMOVIMIENTO" />
+                <ScalarProperty Name="IDTRANSPORTE" ColumnName="IDTRANSPORTE" />
+                <ScalarProperty Name="IDSERVICIO" ColumnName="IDSERVICIO" />
+                <ScalarProperty Name="RUTTALLER" ColumnName="RUTTALLER" />
+                <ScalarProperty Name="IDCENTRO" ColumnName="IDCENTRO" />
+                <ScalarProperty Name="TIPOMOVIMIENTO" ColumnName="TIPOMOVIMIENTO" />
+                <ScalarProperty Name="DOCTRASLADO" ColumnName="DOCTRASLADO" />
+                <ScalarProperty Name="DOCSERVICIOBUCEO" ColumnName="DOCSERVICIOBUCEO" />
+                <ScalarProperty Name="FECHAINICIOMOVIMIENTO" ColumnName="FECHAINICIOMOVIMIENTO" />
+                <ScalarProperty Name="FECHAFINMOVIMIENTO" ColumnName="FECHAFINMOVIMIENTO" />
+                <ScalarProperty Name="COMENTARIOSMOVIMIENTO" ColumnName="COMENTARIOSMOVIMIENTO" />
+                <ScalarProperty Name="TOTALNETO" ColumnName="TOTALNETO" />
+                <ScalarProperty Name="TOTALIMPUESTOS" ColumnName="TOTALIMPUESTOS" />
+                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="FECHACREACION" ColumnName="FECHACREACION" />
+                <ScalarProperty Name="CHOFERTRANSPORTE" ColumnName="CHOFERTRANSPORTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MOVIMIENTORED">
+            <EntityTypeMapping TypeName="TrazaNetModel.MOVIMIENTORED">
+              <MappingFragment StoreEntitySet="MOVIMIENTORED">
+                <ScalarProperty Name="IDMOVIMIENTORED" ColumnName="IDMOVIMIENTORED" />
+                <ScalarProperty Name="IDRED" ColumnName="IDRED" />
+                <ScalarProperty Name="IDJAULA" ColumnName="IDJAULA" />
+                <ScalarProperty Name="IDMOVIMIENTO" ColumnName="IDMOVIMIENTO" />
+                <ScalarProperty Name="IMPREGNADO" ColumnName="IMPREGNADO" />
+                <ScalarProperty Name="LIMPIADO" ColumnName="LIMPIADO" />
+                <ScalarProperty Name="DESINFECTADO" ColumnName="DESINFECTADO" />
+                <ScalarProperty Name="GARANTIA" ColumnName="GARANTIA" />
+                <ScalarProperty Name="FECHAMAR" ColumnName="FECHAMAR" />
+                <ScalarProperty Name="FECHATRASLADO" ColumnName="FECHATRASLADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERSONAS">
+            <EntityTypeMapping TypeName="TrazaNetModel.PERSONAS">
+              <MappingFragment StoreEntitySet="PERSONAS">
+                <ScalarProperty Name="RUTPERSONA" ColumnName="RUTPERSONA" />
+                <ScalarProperty Name="RUTEMPRESA" ColumnName="RUTEMPRESA" />
+                <ScalarProperty Name="NOMBRESPERSONA" ColumnName="NOMBRESPERSONA" />
+                <ScalarProperty Name="APEPATERNO" ColumnName="APEPATERNO" />
+                <ScalarProperty Name="APEMATERNO" ColumnName="APEMATERNO" />
+                <ScalarProperty Name="CARGOPERSONA" ColumnName="CARGOPERSONA" />
+                <ScalarProperty Name="VIGENCIAPERSONA" ColumnName="VIGENCIAPERSONA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RED">
+            <EntityTypeMapping TypeName="TrazaNetModel.RED">
+              <MappingFragment StoreEntitySet="RED">
+                <ScalarProperty Name="IDRED" ColumnName="IDRED" />
+                <ScalarProperty Name="IDTIPORED" ColumnName="IDTIPORED" />
+                <ScalarProperty Name="RUTTALLER" ColumnName="RUTTALLER" />
+                <ScalarProperty Name="TENSIOMETRIAINICIAL" ColumnName="TENSIOMETRIAINICIAL" />
+                <ScalarProperty Name="FECHAINGRESO" ColumnName="FECHAINGRESO" />
+                <ScalarProperty Name="COSTOINICIAL" ColumnName="COSTOINICIAL" />
+                <ScalarProperty Name="VIGENCIARED" ColumnName="VIGENCIARED" />
+                <ScalarProperty Name="FECHACAMBIO" ColumnName="FECHACAMBIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICIOBUCEO">
+            <EntityTypeMapping TypeName="TrazaNetModel.SERVICIOBUCEO">
+              <MappingFragment StoreEntitySet="SERVICIOBUCEO">
+                <ScalarProperty Name="IDSERVICIO" ColumnName="IDSERVICIO" />
+                <ScalarProperty Name="RUTSERVICIO" ColumnName="RUTSERVICIO" />
+                <ScalarProperty Name="NOMBRESERVICIO" ColumnName="NOMBRESERVICIO" />
+                <ScalarProperty Name="ENCARGADOSERVICIO" ColumnName="ENCARGADOSERVICIO" />
+                <ScalarProperty Name="CIUDADSERVICIO" ColumnName="CIUDADSERVICIO" />
+                <ScalarProperty Name="DIRECCIONSERVICIO" ColumnName="DIRECCIONSERVICIO" />
+                <ScalarProperty Name="FONOSERVICIO" ColumnName="FONOSERVICIO" />
+                <ScalarProperty Name="EMAILSERVICIO" ColumnName="EMAILSERVICIO" />
+                <ScalarProperty Name="VIGENCIASERVICIO" ColumnName="VIGENCIASERVICIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TALLER">
+            <EntityTypeMapping TypeName="TrazaNetModel.TALLER">
+              <MappingFragment StoreEntitySet="TALLER">
+                <ScalarProperty Name="RUTTALLER" ColumnName="RUTTALLER" />
+                <ScalarProperty Name="NOMBRETALLER" ColumnName="NOMBRETALLER" />
+                <ScalarProperty Name="CONTACTOTALLER" ColumnName="CONTACTOTALLER" />
+                <ScalarProperty Name="CIUDADTALLER" ColumnName="CIUDADTALLER" />
+                <ScalarProperty Name="DIRECCIONTALLER" ColumnName="DIRECCIONTALLER" />
+                <ScalarProperty Name="FONOTALLER" ColumnName="FONOTALLER" />
+                <ScalarProperty Name="EMAILTALLER" ColumnName="EMAILTALLER" />
+                <ScalarProperty Name="VIGENCIATALLER" ColumnName="VIGENCIATALLER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TELARED">
+            <EntityTypeMapping TypeName="TrazaNetModel.TELARED">
+              <MappingFragment StoreEntitySet="TELARED">
+                <ScalarProperty Name="IDTELA" ColumnName="IDTELA" />
+                <ScalarProperty Name="NOMTELA" ColumnName="NOMTELA" />
+                <ScalarProperty Name="DESCTELA" ColumnName="DESCTELA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPORED">
+            <EntityTypeMapping TypeName="TrazaNetModel.TIPORED">
+              <MappingFragment StoreEntitySet="TIPORED">
+                <ScalarProperty Name="IDTIPORED" ColumnName="IDTIPORED" />
+                <ScalarProperty Name="NOMTIPORED" ColumnName="NOMTIPORED" />
+                <ScalarProperty Name="IDDENIER" ColumnName="IDDENIER" />
+                <ScalarProperty Name="IDMEDIDARED" ColumnName="IDMEDIDARED" />
+                <ScalarProperty Name="IDTELA" ColumnName="IDTELA" />
+                <ScalarProperty Name="IDABERTURARED" ColumnName="IDABERTURARED" />
+                <ScalarProperty Name="IDFUNCIONRED" ColumnName="IDFUNCIONRED" />
+                <ScalarProperty Name="IDFIGURA" ColumnName="IDFIGURA" />
+                <ScalarProperty Name="ZIPPET" ColumnName="ZIPPET" />
+                <ScalarProperty Name="TENSIONSTANDAR" ColumnName="TENSIONSTANDAR" />
+                <ScalarProperty Name="TESNSIONMINIMA" ColumnName="TESNSIONMINIMA" />
+                <ScalarProperty Name="PERIODOESTANDAR" ColumnName="PERIODOESTANDAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANSPORTE">
+            <EntityTypeMapping TypeName="TrazaNetModel.TRANSPORTE">
+              <MappingFragment StoreEntitySet="TRANSPORTE">
+                <ScalarProperty Name="IDTRANSPORTE" ColumnName="IDTRANSPORTE" />
+                <ScalarProperty Name="PATENTETRANSPORTE" ColumnName="PATENTETRANSPORTE" />
+                <ScalarProperty Name="TRASPORTEPROPIO" ColumnName="TRASPORTEPROPIO" />
+                <ScalarProperty Name="EMPRESATRANSPORTE" ColumnName="EMPRESATRANSPORTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="TrazaNetModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="AspNetUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

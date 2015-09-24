@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TrazaNet.DataLayer.RED>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TENSIOMETRIAINICIAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAINGRESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COSTOINICIAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VIGENCIARED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHACAMBIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TALLER.NOMBRETALLER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPORED.NOMTIPORED)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENSIOMETRIAINICIAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAINGRESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COSTOINICIAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VIGENCIARED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHACAMBIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TALLER.NOMBRETALLER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPORED.NOMTIPORED)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDRED }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDRED }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDRED })
+        </td>
+    </tr>
+}
+
+</table>

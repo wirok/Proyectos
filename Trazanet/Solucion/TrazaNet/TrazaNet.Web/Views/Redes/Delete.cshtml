@@ -1,0 +1,80 @@
+﻿@model TrazaNet.DataLayer.RED
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>RED</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TENSIOMETRIAINICIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSIOMETRIAINICIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHAINGRESO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHAINGRESO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTOINICIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTOINICIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIGENCIARED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIGENCIARED)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHACAMBIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHACAMBIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TALLER.NOMBRETALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TALLER.NOMBRETALLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPORED.NOMTIPORED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPORED.NOMTIPORED)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

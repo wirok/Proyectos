@@ -1,0 +1,93 @@
+﻿@model IEnumerable<TrazaNet.DataLayer.TIPORED>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMTIPORED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZIPPET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TENSIONSTANDAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TESNSIONMINIMA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PERIODOESTANDAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ABERTURARED.NOMABERTURA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DENIERRED.NOMDENIER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FIGURARED.NOMFIGURA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUNCIONRED.NOMFUNCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEDIDARED.NOMMEDIDA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELARED.NOMTELA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMTIPORED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZIPPET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENSIONSTANDAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TESNSIONMINIMA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERIODOESTANDAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ABERTURARED.NOMABERTURA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DENIERRED.NOMDENIER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FIGURARED.NOMFIGURA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUNCIONRED.NOMFUNCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEDIDARED.NOMMEDIDA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELARED.NOMTELA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDTIPORED }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDTIPORED }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDTIPORED })
+        </td>
+    </tr>
+}
+
+</table>

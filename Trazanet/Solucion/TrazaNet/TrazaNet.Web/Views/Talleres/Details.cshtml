@@ -1,0 +1,74 @@
+﻿@model TrazaNet.DataLayer.TALLER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TALLER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRETALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRETALLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTACTOTALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTACTOTALLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIUDADTALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIUDADTALLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCIONTALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCIONTALLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FONOTALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FONOTALLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAILTALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILTALLER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VIGENCIATALLER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIGENCIATALLER)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RUTTALLER }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

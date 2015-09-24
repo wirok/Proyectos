@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TrazaNet.DataLayer.TALLER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRETALLER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONTACTOTALLER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIUDADTALLER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCIONTALLER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FONOTALLER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAILTALLER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VIGENCIATALLER)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRETALLER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONTACTOTALLER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIUDADTALLER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCIONTALLER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FONOTALLER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAILTALLER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VIGENCIATALLER)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RUTTALLER }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RUTTALLER }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RUTTALLER })
+        </td>
+    </tr>
+}
+
+</table>

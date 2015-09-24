@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TrazaNet.DataLayer.MEDIDARED>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMMEDIDA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCMEDIDA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMMEDIDA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCMEDIDA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDMEDIDARED }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDMEDIDARED }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDMEDIDARED })
+        </td>
+    </tr>
+}
+
+</table>

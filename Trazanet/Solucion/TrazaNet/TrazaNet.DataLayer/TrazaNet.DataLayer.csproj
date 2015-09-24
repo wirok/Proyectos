@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{439D6E4B-2088-4A90-99E0-AAAE79ED9299}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrazaNet.DataLayer</RootNamespace>
+    <AssemblyName>TrazaNet.DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABERTURARED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRoles.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaims.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogins.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsers.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CENTROS.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CICLOSCENTRO.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CROTAL.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DENIERRED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPRESAS.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FIGURARED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FUNCIONRED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JAULA.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEDIDARED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOVIMIENTO.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOVIMIENTORED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERSONAS.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERVICIOBUCEO.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TALLER.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TELARED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPORED.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSPORTE.cs">
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrazaNet.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrazaNet.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrazaNet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrazaNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrazaNet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrazaNet.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="TrazaNet.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TrazaNet.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="TrazaNet.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TrazaNet.edmx</DependentUpon>
+      <LastGenOutput>TrazaNet.Context.cs</LastGenOutput>
+    </None>
+    <None Include="TrazaNet.edmx.diagram">
+      <DependentUpon>TrazaNet.edmx</DependentUpon>
+    </None>
+    <None Include="TrazaNet.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TrazaNet.edmx</DependentUpon>
+      <LastGenOutput>TrazaNet.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

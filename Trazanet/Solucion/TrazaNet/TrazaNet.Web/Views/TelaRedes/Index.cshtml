@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TrazaNet.DataLayer.TELARED>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMTELA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCTELA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMTELA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCTELA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDTELA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDTELA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDTELA })
+        </td>
+    </tr>
+}
+
+</table>
